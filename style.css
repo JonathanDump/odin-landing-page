@@ -1,0 +1,271 @@
+body {
+    font-family: Sudo, "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.layer1,
+.layer2,
+.layer3,
+.layer4 {
+    display: flex;
+}
+
+/* HEADER and FOOTER*/
+
+header,
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+footer {
+    padding: 16px 32px;
+    background-color: #1f2937;
+    color: #f9faf8;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.links {
+    gap: 16px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.links a:hover {
+    transition: all 0.15s ease;
+    text-decoration: underline;
+}
+
+.copy-right {
+    text-decoration: underline;
+}
+
+/* LAYER 1 */
+.layer1 {
+    background-color: #3e526a;
+    color: #f9faf8;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 32px;
+}
+
+.l1-content-cont {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+.l1-left {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.l1-right {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.about-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+#img-bio {
+    max-width: 65%;
+}
+
+/* LAYER 2 */
+
+.layer2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.info-header-text {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    padding: 22px;
+
+}
+
+.l2-content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.card {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #1f2937;
+    padding: 2px;
+    background-color: white;
+    transition: all 0.15s ease;
+    z-index: 10;
+    position: relative;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* HOVER ANIMATION */
+
+.card-wrap {
+    background-color: #3e526a;
+    position: relative;
+}
+
+.card:hover {
+    transform: translate(6px, -6px);
+}
+
+.card-wrap::before, .card-wrap::after {
+    content: '';
+    display: block;
+    background-color: #3e526a;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    transition: all 0.15s ease;
+}
+
+.card-wrap::before {
+    transform-origin: top left;
+    transform: rotate(45deg) scale(0);
+}
+
+.card-wrap::after {
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+    transform: rotate(45deg) scale(0);
+}
+.card-wrap:hover:before {
+    transform: rotate(-45deg) scale(1);
+} 
+
+.card-wrap:hover:after {
+    transform: rotate(45deg) scale(1);
+}
+
+/* LATER 3 */
+
+.layer3 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 62px;
+    background-color: #e5e7eb;
+}
+
+.l3-content-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.quote {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    margin: 8px 0;
+}
+
+.quoter {
+    width: 70%;
+    height: auto;
+    text-align: right;
+    font-size: 38px;
+}
+
+.quoter.q-2 {
+    font-size: 42px;
+    font-weight: 600;
+    margin: 8px;
+    width: 90%;
+}
+
+/* LAYER 4 */
+
+.layer4-content-cont {
+    background-color: #3e526a;
+    margin: 36px auto;
+    padding: 62px;
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #3e526a;
+    border: 3px solid #e5e7eb;
+    color: inherit;
+    padding: 10px 12px; 
+}
+
+.l4-btn:hover{
+    background-color: #1f2937;
+}
+@font-face {
+    font-family: Sudo;
+    src: url(/Sudo-fonts/Sudo-Regular.woff2);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Sudo;
+    src: url(/Sudo-fonts/Sudo-Italic.woff2);
+    font-style: italic;
+}
