@@ -260,12 +260,12 @@ button {
 }
 @font-face {
     font-family: Sudo;
-    src: url(Sudo-fonts/Sudo-Regular.woff2);
+    src: url("Sudo-fonts/Sudo-Regular.woff2") format("woff2");
     font-style: normal;
 }
 
 @font-face {
     font-family: Sudo;
-    src: url(Sudo-fonts/Sudo-Italic.woff2);
+    src: url("Sudo-fonts/Sudo-Italic.woff2") format("woff2"); 
     font-style: italic;
 }
